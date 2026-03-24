@@ -1107,7 +1107,7 @@
                                         <td>1.5%</td>
                                         <td>40.2%</td>
                                         <td>13.2%</td>
-                                        <td>CK Jan 2026 actuals. New users 0.84%, old 2.28% exit rate (blended 1.5%). Exit→Lead and approval rates from CK B2C funnel (new user cohort, conservative).</td>
+                                        <td>CK Jan 2026 actuals. New users 0.84%, old 2.28% exit rate (blended 1.5%). Exit→Lead 40.2% is from CK new user cohort (1,158 leads / 2,884 exits). <span style="color:#f59e0b;font-weight:600;">Note: this rate may be anomalously high given small sample; old users show 50%. Monitor with more data.</span> Approval 13.2% from same cohort.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Ref / Influencer</strong></td>
@@ -1277,77 +1277,63 @@
                 </div>
 
                 <div class="card fade-in">
-                    <h4 style="margin-bottom:16px;font-weight:700;color:#0f172a;">Business Model</h4>
+                    <h4 style="margin-bottom:20px;font-weight:700;color:#0f172a;font-size:16px;">Business Model</h4>
 
-                    <h5 style="margin-bottom:12px;font-weight:600;color:#475569;">Revenue Stream 1: Subscription (Freemium)</h5>
-                    <div class="table-wrapper">
-                        <table style="font-size:13px;">
-                            <thead>
-                                <tr>
-                                    <th>Tier</th>
-                                    <th>Price</th>
-                                    <th>Features</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Free</strong></td>
-                                    <td>₹0</td>
-                                    <td>SMS scan, basic card recommendation, monthly savings summary</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Premium</strong></td>
-                                    <td>₹199/month</td>
-                                    <td>Real-time UPI interception, shopping overlay, spend planner, debt optimizer, points manager, gamification</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:24px;">
+                        <div style="background:#f0fdf4;border-radius:8px;padding:20px;border:1px solid #d1fae5;">
+                            <h5 style="margin-bottom:12px;font-weight:700;color:#065f46;font-size:14px;">Stream 1: Subscriptions (Freemium)</h5>
+                            <div class="table-wrapper" style="margin-bottom:8px;">
+                                <table style="font-size:13px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Tier</th>
+                                            <th>Price</th>
+                                            <th>Features</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Free</strong></td>
+                                            <td>₹0</td>
+                                            <td>SMS scan, basic card recommendation, monthly savings summary</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Premium</strong></td>
+                                            <td>₹199/month</td>
+                                            <td>UPI interception, shopping overlay, spend planner, debt optimizer, points manager, gamification</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p style="font-size:12px;color:#64748b;">Conversion: 3% (CRED benchmark: 2-5%). Retained margin: <strong>100%</strong>.</p>
+                        </div>
+
+                        <div style="background:#eff6ff;border-radius:8px;padding:20px;border:1px solid #bfdbfe;">
+                            <h5 style="margin-bottom:12px;font-weight:700;color:#1e40af;font-size:14px;">Stream 2: Card Application Affiliate</h5>
+                            <div style="font-size:13px;color:#475569;display:flex;flex-direction:column;gap:8px;">
+                                <div>Users discover portfolio gaps through spend analysis and apply for recommended cards.</div>
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px;">
+                                    <div style="background:white;padding:10px;border-radius:4px;text-align:center;">
+                                        <div style="font-size:11px;color:#64748b;">Commission</div>
+                                        <div style="font-size:16px;font-weight:700;color:#0f172a;">₹2,000</div>
+                                    </div>
+                                    <div style="background:white;padding:10px;border-radius:4px;text-align:center;">
+                                        <div style="font-size:11px;color:#64748b;">Retained (50%)</div>
+                                        <div style="font-size:16px;font-weight:700;color:#10b981;">₹1,000</div>
+                                    </div>
+                                </div>
+                                <div style="font-size:12px;color:#64748b;margin-top:4px;">Application rate: <strong>0.8% of MAU/month</strong> (CRED: 1-2%, discounted for early stage)</div>
+                            </div>
+                        </div>
                     </div>
-                    <p style="font-size:12px;color:#64748b;margin-top:8px;">Freemium-to-paid conversion assumption: 3% (benchmark: CRED 2-5%). Retained margin: 100%.</p>
 
-                    <h5 style="margin-bottom:12px;font-weight:600;color:#475569;margin-top:20px;">Revenue Stream 2: Card Application Affiliate</h5>
-                    <ul class="bullet-list">
-                        <li>
-                            <span>→</span>
-                            <span>Users discover portfolio gaps through spend analysis</span>
-                        </li>
-                        <li>
-                            <span>→</span>
-                            <span>Commission per approved card: <strong>₹2,000 avg</strong></span>
-                        </li>
-                        <li>
-                            <span>→</span>
-                            <span>Cashback to user: <strong>50% (₹1,000)</strong></span>
-                        </li>
-                        <li>
-                            <span>→</span>
-                            <span>Retained margin: <strong>50% = ₹1,000</strong> per approved card</span>
-                        </li>
-                        <li>
-                            <span>→</span>
-                            <span>Application rate assumption: <strong>0.8% of MAU per month</strong> (CRED benchmark: 1-2%, discounted for early stage)</span>
-                        </li>
-                    </ul>
-
-                    <h5 style="margin-bottom:12px;font-weight:600;color:#475569;margin-top:20px;">Strategic Value</h5>
-                    <ul class="bullet-list">
-                        <li>
-                            <span>→</span>
-                            <span>Converts passive comparison traffic into active retained user base with daily engagement</span>
-                        </li>
-                        <li>
-                            <span>→</span>
-                            <span>Creates recurring revenue independent of affiliate commission changes or bank policy shifts</span>
-                        </li>
-                        <li>
-                            <span>→</span>
-                            <span>High-intent card application funnel backed by actual spend data</span>
-                        </li>
-                        <li>
-                            <span>→</span>
-                            <span>Cross-sell surface for insurance, personal loans, and CashKaro deals</span>
-                        </li>
-                    </ul>
+                    <h5 style="margin-bottom:12px;font-weight:700;color:#475569;font-size:14px;">Strategic Value</h5>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;font-size:13px;">
+                        <div style="padding:12px;background:#f8fafc;border-radius:6px;border-left:3px solid #10b981;">Converts passive comparison traffic into active retained user base with daily engagement</div>
+                        <div style="padding:12px;background:#f8fafc;border-radius:6px;border-left:3px solid #3b82f6;">Recurring revenue independent of affiliate commission changes or bank policy shifts</div>
+                        <div style="padding:12px;background:#f8fafc;border-radius:6px;border-left:3px solid #8b5cf6;">High-intent card application funnel backed by actual spend data (not comparison browsing)</div>
+                        <div style="padding:12px;background:#f8fafc;border-radius:6px;border-left:3px solid #f59e0b;">Cross-sell surface for insurance, personal loans, and CashKaro deals</div>
+                    </div>
                 </div>
 
                 <div class="card fade-in">
@@ -1360,7 +1346,7 @@
                                     <th>Period</th>
                                     <th>MAU</th>
                                     <th>Sub Conv (%)</th>
-                                    <th>Premium Subs</th>
+                                    <th>Premium Subscriptions</th>
                                     <th>Sub Revenue</th>
                                     <th>Card App (%)</th>
                                     <th>Card Outs</th>
@@ -1406,7 +1392,7 @@
                                 </tr>
                                 <tr class="row-done">
                                     <td><strong>Bank API Scaling</strong></td>
-                                    <td>Expand Axis to all cards, upgrade SBI API</td>
+                                    <td>Stabilize Axis, upgrade SBI API</td>
                                     <td><span class="priority-badge priority-p0">P0</span></td>
                                     <td><span class="stage-badge stage-done">Done</span></td>
                                     <td>2/13/2026</td>
@@ -1621,7 +1607,7 @@
                         <div class="team-card">
                             <h4>Mohsin</h4>
                             <div class="role">Product Lead / Business Lead</div>
-                            <p>Drives product strategy, commercialization roadmap, and GTM execution. Serves as effective business lead for platform P&L.</p>
+                            <p>Owns platform P&L, commercialization strategy, and GTM. Decision-maker for roadmap prioritization and partner deals.</p>
                         </div>
                     </div>
 
@@ -1630,27 +1616,27 @@
                         <div class="team-card">
                             <h4>Abhyudaya</h4>
                             <div class="role">Product Manager (Cards)</div>
-                            <p>Leads product execution for the cards vertical across roadmap planning, feature delivery, and business coordination.</p>
+                            <p>Owns Great.cards feature delivery, PRD writing, and cards vertical coordination. Primary PM for Cashback + Login and Premium Subscription builds.</p>
                         </div>
                         <div class="team-card">
                             <h4>Mahik</h4>
-                            <div class="role">Associate Product Manager (Partners / Whitelabel)</div>
-                            <p>Supports partner-led and whitelabel initiatives, along with feature execution across priority workstreams as needed.</p>
+                            <div class="role">APM (Partners / Whitelabel)</div>
+                            <p>Owns whitelabel partner onboarding and influencer ops workflows. Responsible for Gamification v1 on Dr.BankKaro roadmap.</p>
                         </div>
                         <div class="team-card">
                             <h4>Bhavya M</h4>
-                            <div class="role">Associate Product Manager (B2B2C + QA)</div>
-                            <p>Supports B2B2C initiatives, QA ownership, and feature execution across verticals as required.</p>
+                            <div class="role">APM (B2B2C + QA)</div>
+                            <p>Owns QA processes and B2B2C integration testing. Responsible for Points Manager on Dr.BankKaro roadmap.</p>
                         </div>
                         <div class="team-card">
                             <h4>3 Product Interns</h4>
                             <div class="role">Product Support</div>
-                            <p>Support research, analysis, testing, and execution tasks across initiatives.</p>
+                            <p>Research, competitive analysis, data entry, and testing support. Rotated across workstreams based on priority.</p>
                         </div>
                         <div class="team-card">
                             <h4>Harsh</h4>
                             <div class="role">Product Operations (Card Data)</div>
-                            <p>Owns product operations for card data, including benefits, inputs, and calculation-related data integrity.</p>
+                            <p>Owns card benefits accuracy: reward structures, fee waivers, milestone data, and calculator input integrity for 100+ cards.</p>
                         </div>
                     </div>
 
@@ -1659,22 +1645,22 @@
                         <div class="team-card">
                             <h4>Vishvjeet</h4>
                             <div class="role">Full Stack Lead</div>
-                            <p>Primary technical execution lead across core product and platform work.</p>
+                            <p>Primary engineering anchor. Owns Great.cards core, whitelabel templating, API architecture, and Dr.BankKaro MVP build.</p>
                         </div>
                         <div class="team-card">
                             <h4>Tarandeep</h4>
-                            <div class="role">Backend Lead (transition risk)</div>
-                            <p>Has been the main backend anchor across integrations and platform logic. <strong style="color:var(--danger);">His transition creates delivery risk for backend-heavy work.</strong></p>
+                            <div class="role">Backend Lead <span style="color:var(--danger);font-size:11px;">(departing)</span></div>
+                            <p>Built bank API integrations, data pipelines, and backend logic. <strong style="color:var(--danger);">Departure creates delivery risk for API Platform, UPI interception, and data layer work.</strong></p>
                         </div>
                         <div class="team-card">
                             <h4>Pramod</h4>
                             <div class="role">Frontend Engineer</div>
-                            <p>Owns frontend implementation across user-facing product surfaces.</p>
+                            <p>Owns Great.cards frontend, Shopping Overlay build, and Dr.BankKaro app UI implementation.</p>
                         </div>
                         <div class="team-card">
                             <h4>Yogesh</h4>
                             <div class="role">Design Lead</div>
-                            <p>Leads product design across Great.cards and related platform experiences.</p>
+                            <p>Designed Great.cards experience, brand identity, and all product surfaces. Responsible for Dr.BankKaro app design system.</p>
                         </div>
                     </div>
 
@@ -1682,13 +1668,13 @@
                     <div class="team-grid">
                         <div class="team-card">
                             <h4>Shubham</h4>
-                            <div class="role">DevOps Support (shared)</div>
-                            <p>Provides infrastructure and deployment support on a shared basis.</p>
+                            <div class="role">DevOps (shared)</div>
+                            <p>CI/CD, deployment, and infrastructure. Shared with CK/EK; BankKaro gets allocated time, not dedicated.</p>
                         </div>
                         <div class="team-card">
                             <h4>Ashok</h4>
-                            <div class="role">SEO Support (shared)</div>
-                            <p>Provides SEO support for organic growth initiatives on a shared basis.</p>
+                            <div class="role">SEO (shared)</div>
+                            <p>Organic keyword strategy and technical SEO. Shared resource; BankKaro competes for bandwidth with CK/EK priorities.</p>
                         </div>
                     </div>
                 </div>
@@ -1740,36 +1726,62 @@
                 <div class="section-subtitle">Clear approvals and decisions requested</div>
 
                 <div class="card fade-in">
-                    <ul class="bullet-list">
-                        <li>
-                            <span>1.</span>
-                            <span><strong>Recognize BankKaro as a platform P&L, not a side rail.</strong> Historical banking monetization was rail-led (CK/EK dependent). The platform now operates as a standalone entity with owned distribution, dedicated product, and clean unit economics per stream.</span>
-                        </li>
-                        <li>
-                            <span>2.</span>
-                            <span><strong>Approve cards-first focus through Q3 2026.</strong> Great.cards and Dr.BankKaro are the primary wedges. Insurance, loans, and corporate whitelabel are active roadmap bets but secondary in priority. Focus resources on cards commercialization first.</span>
-                        </li>
-                        <li>
-                            <span>3.</span>
-                            <span><strong>Approve whitelabel + creator/ref as major commercialization bets.</strong> These are not side projects. They represent repeatable, scalable B2B2C distribution. Whitelabel partner ramp is a primary growth vector alongside B2C organic and influencer channels.</span>
-                        </li>
-                        <li>
-                            <span>4.</span>
-                            <span><strong>Approve Dr.BankKaro app investment as consumer layer.</strong> MVP target: Q2 2026. This creates retained, daily-active users and two distinct revenue lines (subscription + high-margin affiliate). Critical for platform switching costs and user retention.</span>
-                        </li>
-                        <li>
-                            <span>5.</span>
-                            <span><strong>Approve Corporate Whitelabel as a strategic bet.</strong> BankKaro + CashKaro for large employers. Preferential cashback (60%) for employees of Category A companies. Bundles cards, loans, insurance, and deals in one surface.</span>
-                        </li>
-                        <li>
-                            <span>6.</span>
-                            <span><strong>Approve team reinforcements: Backend Engineer (₹30L) and Android Developer (₹24L).</strong> Backend hire is critical for Tarandeep transition. Android hire is timing-critical for Dr.BankKaro Q2 MVP. Both are execution-critical for roadmap delivery.</span>
-                        </li>
-                        <li>
-                            <span>7.</span>
-                            <span><strong>Recognize platform upside in 18-24 month horizon.</strong> If whitelabel, ref, Dr.BankKaro, corporate WL, and insurance execute as planned, retained GM can reach ₹1.2-1.5 Cr+ monthly. This requires sustained focus on distribution, product quality, and team execution.</span>
-                        </li>
-                    </ul>
+                    <div class="table-wrapper">
+                        <table style="font-size:13px;">
+                            <thead>
+                                <tr>
+                                    <th style="width:30px;">#</th>
+                                    <th>Decision</th>
+                                    <th style="width:140px;">Why Now</th>
+                                    <th style="width:120px;">Cost / Implication</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1</strong></td>
+                                    <td><strong>Recognize BankKaro as a standalone platform P&L</strong></td>
+                                    <td>Product identity and distribution now exist independently of CK/EK</td>
+                                    <td>Reporting, attribution, budget separation</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2</strong></td>
+                                    <td><strong>Approve cards-first focus through Q3 2026</strong></td>
+                                    <td>Cards are the proven wedge; platform bets need cards volume to scale</td>
+                                    <td>Insurance, loans, corporate remain secondary priority</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3</strong></td>
+                                    <td><strong>Approve whitelabel + ref as primary growth vectors</strong></td>
+                                    <td>Repeatable B2B2C distribution. Tide live. 30-min partner onboarding.</td>
+                                    <td>Partner ops bandwidth, rev-share (70% to partner)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4</strong></td>
+                                    <td><strong>Approve Dr.BankKaro app investment (MVP Q2 2026)</strong></td>
+                                    <td>Only path to recurring revenue and retained daily users</td>
+                                    <td>Android dev hire (₹24L/yr), 3-month build cycle</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5</strong></td>
+                                    <td><strong>Approve Corporate Whitelabel as a strategic bet</strong></td>
+                                    <td>Bundles all products for Category A employers; differentiated commission potential</td>
+                                    <td>BD effort, compliance for bundled offering</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>6</strong></td>
+                                    <td><strong>Approve Backend Engineer hire (₹30L/yr)</strong></td>
+                                    <td>Tarandeep departing. No backend cover for API, data layer, UPI work.</td>
+                                    <td>₹30L/yr. Hiring approved, needs to close.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>7</strong></td>
+                                    <td><strong>Recognize 18-month platform upside (₹1.2-1.5 Cr+ monthly retained GM)</strong></td>
+                                    <td>All-channel-scaled scenario shows path. Requires sustained execution.</td>
+                                    <td>Continued team investment and product focus</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
 
@@ -1840,7 +1852,7 @@
             { id: "ref_id", name: "Ref / Influencer", cat: "cards", color: "#8b5cf6", comm: 2000, pay: 70, type: "partner", label: "Partner Share (70%)" },
             { id: "whitelabel", name: "Whitelabel", cat: "cards", color: "#10b981", comm: 2000, pay: 70, type: "partner", label: "Partner Share (70%)" },
             { id: "api", name: "API Platform", cat: "cards", color: "#f59e0b", comm: 2000, pay: 70, type: "partner", label: "Rev-share (70%)" },
-            { id: "drbankkaro_sub", name: "Dr.BankKaro Subs", cat: "platform", color: "#ec4899", comm: 199, pay: 0, type: "subscription", label: "Subscription Revenue" },
+            { id: "drbankkaro_sub", name: "Dr.BankKaro Subscriptions", cat: "platform", color: "#ec4899", comm: 199, pay: 0, type: "subscription", label: "Subscription Revenue" },
             { id: "drbankkaro_cards", name: "Dr.BankKaro Cards", cat: "platform", color: "#f472b6", comm: 2000, pay: 50, type: "app_affiliate", label: "Cashback to User" },
             { id: "corp_whitelabel", name: "Corporate Whitelabel", cat: "platform", color: "#14b8a6", comm: 2000, pay: 60, type: "corp", label: "Cashback to Employees (60%)" },
             { id: "mini_cashback", name: "Mini Cashback App", cat: "platform", color: "#a855f7", comm: 2000, pay: 50, type: "b2c", label: "Cashback to User (50%)" },
@@ -2011,7 +2023,7 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td><span class="color-dot" style="background:${stream.color};"></span><strong>${stream.name}</strong></td>
-                    <td><input type="number" value="${conversions}" class="rate-input" style="width:80px;" data-stream-id="${s.id}" class="pl-conv-input" /></td>
+                    <td><input type="number" value="${conversions}" class="rate-input pl-conv-input" style="width:80px;" data-stream-id="${s.id}" /></td>
                     <td>₹${commission.toLocaleString()}</td>
                     <td>${stream.pay}%</td>
                     <td>₹${retained.toLocaleString()}</td>
@@ -2147,13 +2159,13 @@
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td><strong>${row.period}</strong></td>
-                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="mau" value="${row.mau}" style="width:85px;" /></td>
-                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="subConv" value="${row.subConv}" step="0.1" style="width:72px;" />%</td>
-                    <td class="drbk-subs" data-row="${idx}">0</td>
-                    <td class="drbk-subrev" data-row="${idx}">₹0</td>
-                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="cardApp" value="${row.cardApp}" step="0.1" style="width:72px;" />%</td>
-                    <td class="drbk-cards" data-row="${idx}">0</td>
-                    <td class="drbk-affrev" data-row="${idx}">₹0</td>
+                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="mau" value="${row.mau}" style="width:90px;" /></td>
+                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="subConv" value="${row.subConv}" step="0.1" style="width:65px;" /><span style="font-size:12px;color:#64748b;">%</span></td>
+                    <td class="drbk-subs" data-row="${idx}" style="font-weight:600;">0</td>
+                    <td class="drbk-subrev" data-row="${idx}" style="font-weight:600;">₹0</td>
+                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="cardApp" value="${row.cardApp}" step="0.1" style="width:65px;" /><span style="font-size:12px;color:#64748b;">%</span></td>
+                    <td class="drbk-cards" data-row="${idx}" style="font-weight:600;">0</td>
+                    <td class="drbk-affrev" data-row="${idx}" style="font-weight:600;">₹0</td>
                     <td class="drbk-total" data-row="${idx}" style="font-weight:700;color:var(--accent);">₹0</td>
                 `;
                 tbody.appendChild(tr);
