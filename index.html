@@ -835,7 +835,8 @@
                 <a href="#section-6" class="nav-link" data-section="section-6">Roadmap</a>
                 <a href="#section-7" class="nav-link" data-section="section-7">Team</a>
                 <a href="#section-8" class="nav-link" data-section="section-8">Founder Asks</a>
-                <a href="#section-9" class="nav-link" data-section="section-9">Historical Context</a>
+                <!-- Historical Context nav link hidden per founder feedback -->
+                <!-- <a href="#section-9" class="nav-link" data-section="section-9">Historical Context</a> -->
             </nav>
         </div>
 
@@ -847,8 +848,8 @@
 
                 <div class="metrics-grid">
                     <div class="metric-card">
-                        <div class="metric-label">Current Monthly Retained GM</div>
-                        <div class="metric-value" id="metric-gm">₹0.06L</div>
+                        <div class="metric-label">Monthly Retained GM (6M Plan)</div>
+                        <div class="metric-value" id="metric-gm">₹4.22L</div>
                     </div>
                     <div class="metric-card">
                         <div class="metric-label">Annual Opex</div>
@@ -1152,9 +1153,9 @@
                 <div class="section-subtitle">Select scenario and adjust inputs to model economics</div>
 
                 <div class="tab-group" id="scenario-tabs">
-                    <button class="tab-btn active" data-scenario="current">Current (Month 0)</button>
+                    <button class="tab-btn" data-scenario="current">Current (Month 0)</button>
                     <button class="tab-btn" data-scenario="three_month">3-Month Target</button>
-                    <button class="tab-btn" data-scenario="six_month">6-Month Plan</button>
+                    <button class="tab-btn active" data-scenario="six_month">6-Month Plan</button>
                     <button class="tab-btn" data-scenario="scaled_12m">Scaled (12M)</button>
                     <button class="tab-btn" data-scenario="whitelabel_led">Whitelabel-Led (12M)</button>
                     <button class="tab-btn" data-scenario="founder_target">Founder Target (24M, 5x Opex)</button>
@@ -1787,8 +1788,8 @@
                 </div>
             </section>
 
-            <!-- SECTION 9: HISTORICAL CONTEXT -->
-            <section id="section-9" class="section">
+            <!-- SECTION 9: HISTORICAL CONTEXT (hidden per founder feedback) -->
+            <section id="section-9" class="section" style="display:none;">
                 <div class="accordion">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         <span>Historical Context (Click to expand)</span>
@@ -1943,7 +1944,7 @@
             { period: "M12", mau: 20000, subConv: 3, cardApp: 1.0 }
         ];
 
-        let currentScenario = "current";
+        let currentScenario = "six_month";
         let userConvOverrides = {}; // Track user edits to P&L conversions
 
         // Init
@@ -2079,10 +2080,12 @@
             document.getElementById('total-payouts').textContent = `₹${(totalPayouts / 100000).toFixed(2)}L`;
             document.getElementById('total-gm').textContent = `₹${(totalGM / 100000).toFixed(2)}L`;
 
-            const monthlyOpex = 2500000 / 12;
+            const monthlyOpex = 25000000 / 12;
             const surplus = totalGM - monthlyOpex;
 
             document.getElementById('metric-gm').textContent = `₹${(totalGM / 100000).toFixed(2)}L`;
+            const scenarioLabel = SCENARIOS[currentScenario]?.name || currentScenario;
+            document.querySelector('#metric-gm').closest('.metric-card').querySelector('.metric-label').textContent = `Monthly Retained GM (${scenarioLabel})`;
 
             if (surplus >= 0) {
                 document.getElementById('summary-surplus').style.display = 'flex';
