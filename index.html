@@ -902,7 +902,7 @@
 
                 <div id="cards-layer" class="stream-cards" style="display:grid;">
                     <div class="stream-card" style="border-left-color:#3b82f6;">
-                        <h4><span class="color-dot" style="background:#3b82f6;"></span>Great.Cards with Cashback</h4>
+                        <h4><span class="color-dot" style="background:#3b82f6;"></span>Great.cards with Cashback</h4>
                         <div class="status">Status: Live</div>
                         <ul>
                             <li>User-facing credit card comparison and recommendation engine</li>
@@ -1106,9 +1106,9 @@
                                     <tr>
                                         <td><strong>B2C (Great.cards)</strong></td>
                                         <td>1.5%</td>
-                                        <td>40.2%</td>
+                                        <td>25%</td>
                                         <td>13.2%</td>
-                                        <td>CK Jan 2026 actuals. New users 0.84%, old 2.28% exit rate (blended 1.5%). Exit→Lead 40.2% is from CK new user cohort (1,158 leads / 2,884 exits). <span style="color:#f59e0b;font-weight:600;">Note: this rate may be anomalously high given small sample; old users show 50%. Monitor with more data.</span> Approval 13.2% from same cohort.</td>
+                                        <td>CK Jan 2026 actuals. Page→Exit: new users 0.84%, old 2.28% (blended 1.5%). Raw exit→lead was 40.2% (CK new user cohort, 1,158/2,884) but likely anomalous given small sample. <strong>Using 25% as conservative planning assumption.</strong> Approval 13.2% from same cohort.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Ref / Influencer</strong></td>
@@ -1141,7 +1141,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p style="font-size:11px;color:#94a3b8;margin-top:8px;">All rates from: User Data for Benchmarking Great.Cards Listing Page.xlsx (CK Jan 2026) and data benchmarks(Sheet2).csv</p>
+                        <p style="font-size:11px;color:#94a3b8;margin-top:8px;">All rates from: User Data for Benchmarking Great.cards Listing Page.xlsx (CK Jan 2026) and data benchmarks(Sheet2).csv</p>
                     </div>
                 </div>
             </section>
@@ -1155,9 +1155,9 @@
                     <button class="tab-btn active" data-scenario="current">Current (Month 0)</button>
                     <button class="tab-btn" data-scenario="three_month">3-Month Target</button>
                     <button class="tab-btn" data-scenario="six_month">6-Month Plan</button>
-                    <button class="tab-btn" data-scenario="founder_target">Founder Target (12M)</button>
+                    <button class="tab-btn" data-scenario="scaled_12m">Scaled (12M)</button>
                     <button class="tab-btn" data-scenario="whitelabel_led">Whitelabel-Led (12M)</button>
-                    <button class="tab-btn" data-scenario="platform_upside">All Channels Scaled (18M)</button>
+                    <button class="tab-btn" data-scenario="founder_target">Founder Target (24M, 5x Opex)</button>
                 </div>
 
                 <div class="card fade-in">
@@ -1267,12 +1267,6 @@
                             <h5>Card Recommender</h5>
                             <p>Portfolio gap analysis based on actual spend. "You leak ₹18K/yr on travel. Amex Platinum would fix this."</p>
                             <div class="mockup-stat">₹18,450/yr unlocked</div>
-                        </div>
-                        <div class="mockup-card">
-                            <div class="mockup-icon">🎮</div>
-                            <h5>Gamification Hub</h5>
-                            <p>Levels, badges, challenges, leaderboard. "Level 5 Strategist." Day streaks and XP system.</p>
-                            <div class="mockup-stat">92% Score</div>
                         </div>
                     </div>
                 </div>
@@ -1728,13 +1722,19 @@
 
                 <div class="card fade-in">
                     <div class="table-wrapper">
-                        <table style="font-size:13px;">
+                        <table style="font-size:13px;table-layout:fixed;width:100%;">
+                            <colgroup>
+                                <col style="width:5%;" />
+                                <col style="width:35%;" />
+                                <col style="width:35%;" />
+                                <col style="width:25%;" />
+                            </colgroup>
                             <thead>
                                 <tr>
-                                    <th style="width:30px;">#</th>
+                                    <th>#</th>
                                     <th>Decision</th>
-                                    <th style="width:140px;">Why Now</th>
-                                    <th style="width:120px;">Cost / Implication</th>
+                                    <th>Why Now</th>
+                                    <th>Cost / Implication</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1776,8 +1776,8 @@
                                 </tr>
                                 <tr>
                                     <td><strong>7</strong></td>
-                                    <td><strong>Recognize 18-month platform upside (₹1.2-1.5 Cr+ monthly retained GM)</strong></td>
-                                    <td>All-channel-scaled scenario shows path. Requires sustained execution.</td>
+                                    <td><strong>Approve 24-month 5x opex target (₹1.04 Cr+ monthly retained GM)</strong></td>
+                                    <td>All-channel-scaled scenario shows path. Requires sustained execution across all 10 streams.</td>
                                     <td>Continued team investment and product focus</td>
                                 </tr>
                             </tbody>
@@ -1849,7 +1849,7 @@
     <script>
         // Data
         const STREAMS = [
-            { id: "organic", name: "Great.Cards Cashback", cat: "cards", color: "#3b82f6", comm: 2000, pay: 50, type: "b2c", label: "Cashback to User" },
+            { id: "organic", name: "Great.cards Cashback", cat: "cards", color: "#3b82f6", comm: 2000, pay: 50, type: "b2c", label: "Cashback to User" },
             { id: "ref_id", name: "Great.cards Influencers", cat: "cards", color: "#8b5cf6", comm: 2000, pay: 70, type: "partner", label: "Partner Share (70%)" },
             { id: "whitelabel", name: "Whitelabel (Tide)", cat: "cards", color: "#10b981", comm: 2000, pay: 70, type: "partner", label: "Partner Share (70%)" },
             { id: "api", name: "API Platform", cat: "cards", color: "#f59e0b", comm: 2000, pay: 70, type: "partner", label: "Rev-share (70%)" },
@@ -1892,9 +1892,9 @@
                     { id: "insurance", conv: 20 }, { id: "loans", conv: 0 }
                 ]
             },
-            founder_target: {
-                name: "Founder Target (12M)",
-                note: "Full platform at 12 months. 200+ influencers. 10+ WL partners. Dr.BankKaro at 50K MAU. Insurance live. Corporate WL pilot.",
+            scaled_12m: {
+                name: "Scaled (12M)",
+                note: "12-month milestone. 200+ influencers. 10+ WL partners. Dr.BankKaro at 50K MAU. Insurance live. Corporate WL pilot.",
                 streams: [
                     { id: "organic", conv: 250 }, { id: "ref_id", conv: 200 }, { id: "whitelabel", conv: 600 }, { id: "api", conv: 200 },
                     { id: "drbankkaro_sub", conv: 1500 }, { id: "drbankkaro_cards", conv: 500 },
@@ -1912,20 +1912,20 @@
                     { id: "insurance", conv: 30 }, { id: "loans", conv: 10 }
                 ]
             },
-            platform_upside: {
-                name: "All Channels Scaled (18-Month)",
-                note: "All channels scaled. Dr.BankKaro 200K MAU. Insurance + Corp WL live. Mini cashback app launched.",
+            founder_target: {
+                name: "Founder Target (24M, 5x Opex)",
+                note: "24-month target: 5x monthly opex = ₹1.04 Cr retained GM. All channels at scale. Dr.BankKaro 333K MAU. Insurance + Corp WL mature. Full platform monetization.",
                 streams: [
-                    { id: "organic", conv: 400 }, { id: "ref_id", conv: 300 }, { id: "whitelabel", conv: 1200 }, { id: "api", conv: 500 },
-                    { id: "drbankkaro_sub", conv: 6000 }, { id: "drbankkaro_cards", conv: 2000 },
-                    { id: "corp_whitelabel", conv: 500 }, { id: "mini_cashback", conv: 200 },
-                    { id: "insurance", conv: 500 }, { id: "loans", conv: 100 }
+                    { id: "organic", conv: 600 }, { id: "ref_id", conv: 500 }, { id: "whitelabel", conv: 2000 }, { id: "api", conv: 800 },
+                    { id: "drbankkaro_sub", conv: 10000 }, { id: "drbankkaro_cards", conv: 3000 },
+                    { id: "corp_whitelabel", conv: 800 }, { id: "mini_cashback", conv: 400 },
+                    { id: "insurance", conv: 800 }, { id: "loans", conv: 200 }
                 ]
             }
         };
 
         const FUNNEL_RATES = {
-            organic: { pageToExit: 0.015, exitToLead: 0.402, leadToCardOut: 0.132, label: "B2C (Great.cards)" },
+            organic: { pageToExit: 0.015, exitToLead: 0.25, leadToCardOut: 0.132, label: "B2C (Great.cards)" },
             ref_id: { pageToExit: 0.04, exitToLead: 0.037, leadToCardOut: 0.201, label: "Ref / Influencer" },
             whitelabel: { pageToExit: 0.033, exitToLead: 0.15, leadToCardOut: 0.082, label: "Whitelabel" },
             api: { pageToExit: 0.03, exitToLead: 0.01, leadToCardOut: 0.166, label: "API Platform" },
