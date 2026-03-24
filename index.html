@@ -351,7 +351,7 @@
         }
 
         input[type="number"] {
-            width: 80px;
+            width: 85px;
         }
 
         /* Control Row */
@@ -713,18 +713,20 @@
 
         /* Editable rate input */
         .rate-input {
-            width: 60px;
-            padding: 4px 6px;
+            width: 72px;
+            padding: 6px 8px;
             border: 1px solid #e2e8f0;
             border-radius: 3px;
-            font-size: 12px;
+            font-size: 13px;
             text-align: center;
             font-family: 'Inter', sans-serif;
+            transition: width 0.2s;
         }
 
         .rate-input:focus {
             border-color: var(--accent);
             outline: none;
+            width: 90px;
         }
 
         /* Dr.BK mockup screens */
@@ -1109,31 +1111,31 @@
                                     </tr>
                                     <tr>
                                         <td><strong>Ref / Influencer</strong></td>
-                                        <td>100% (click = exit)</td>
+                                        <td>4% <span style="color:#94a3b8;">(hypothesis)</span></td>
                                         <td>3.7%</td>
                                         <td>20.1%</td>
-                                        <td>EK/IM B2B Jan 2026 data. Link goes direct to bank. Higher approval because influencer audience is pre-qualified for intent.</td>
+                                        <td>User lands on Great.cards via influencer link, exits when clicking "Apply Now." Page→Exit 4% hypothesis: higher intent than organic B2C (creator-driven), but still a product interface. Exit→Lead 3.7% and approval 20.1% from EK/IM B2B Jan 2026 data.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Whitelabel</strong></td>
                                         <td>3.3%</td>
                                         <td>15%</td>
                                         <td>8.2%</td>
-                                        <td>Page→Exit from Tide early data (first 2 weeks). Exit→Lead is hypothesis (partner traffic has moderate intent). Lead→Card Out from early WL data. End-to-end validates: 3.3% x 15% x 8.2% = 0.04%, matching WL benchmark (385 card outs / 943K clicks).</td>
+                                        <td>User lands on partner-branded Great.cards (e.g. tide.bankkaro.com), exits on "Apply Now." Page→Exit 3.3% from Tide early data (2 weeks). Exit→Lead 15% hypothesis (partner traffic, moderate intent). Lead→Card Out 8.2% from WL data.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>API Platform</strong></td>
-                                        <td>100% (embed = exit)</td>
+                                        <td>3% <span style="color:#94a3b8;">(hypothesis)</span></td>
                                         <td>1%</td>
                                         <td>16.6%</td>
-                                        <td>API embeds link directly (click = exit). Exit→Lead 1% conservative for embedded widget traffic. Approval rate from benchmark blended rate. Source: data benchmarks(Sheet2).csv.</td>
+                                        <td>User sees embedded widget on partner site, clicks through to product interface, exits on "Apply Now." Page→Exit 3% hypothesis (embedded, lower intent). Exit→Lead 1% conservative. Approval 16.6% from benchmark blend. Source: data benchmarks(Sheet2).csv.</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Dr.BankKaro</strong></td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>0.8%</td>
-                                        <td>Simplified: MAU → Card Application. 0.8% of MAU apply/month. CRED benchmark: 1-2%, discounted for early stage.</td>
+                                        <td>4% <span style="color:#94a3b8;">(hypothesis)</span></td>
+                                        <td>15% <span style="color:#94a3b8;">(hypothesis)</span></td>
+                                        <td>13.2%</td>
+                                        <td>App recommends card based on spend analysis. 4% of MAU click "Apply Now" on a recommendation. 15% of those complete lead form. 13.2% approval (same as B2C). End-to-end: ~0.8% of MAU, aligning with CRED benchmark (1-2%, discounted).</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1911,10 +1913,10 @@
 
         const FUNNEL_RATES = {
             organic: { pageToExit: 0.015, exitToLead: 0.402, leadToCardOut: 0.132, label: "B2C (Great.cards)" },
-            ref_id: { pageToExit: 1.0, exitToLead: 0.037, leadToCardOut: 0.201, label: "Ref / Influencer" },
+            ref_id: { pageToExit: 0.04, exitToLead: 0.037, leadToCardOut: 0.201, label: "Ref / Influencer" },
             whitelabel: { pageToExit: 0.033, exitToLead: 0.15, leadToCardOut: 0.082, label: "Whitelabel" },
-            api: { pageToExit: 1.0, exitToLead: 0.01, leadToCardOut: 0.166, label: "API Platform" },
-            drbankkaro_cards: { pageToExit: 1.0, exitToLead: 1.0, leadToCardOut: 0.008, label: "Dr.BankKaro" }
+            api: { pageToExit: 0.03, exitToLead: 0.01, leadToCardOut: 0.166, label: "API Platform" },
+            drbankkaro_cards: { pageToExit: 0.04, exitToLead: 0.15, leadToCardOut: 0.132, label: "Dr.BankKaro" }
         };
 
         const FUNNEL_DEFAULTS = { organic: 80, ref_id: 70, whitelabel: 200, api: 50, drbankkaro_cards: 100 };
@@ -2009,7 +2011,7 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td><span class="color-dot" style="background:${stream.color};"></span><strong>${stream.name}</strong></td>
-                    <td><input type="number" value="${conversions}" style="width:70px;padding:4px 6px;border:1px solid #e2e8f0;border-radius:3px;font-size:12px;text-align:center;" data-stream-id="${s.id}" class="pl-conv-input" /></td>
+                    <td><input type="number" value="${conversions}" class="rate-input" style="width:80px;" data-stream-id="${s.id}" class="pl-conv-input" /></td>
                     <td>₹${commission.toLocaleString()}</td>
                     <td>${stream.pay}%</td>
                     <td>₹${retained.toLocaleString()}</td>
@@ -2091,7 +2093,7 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td><strong>${rate.label}</strong></td>
-                    <td><input type="number" class="funnel-input" data-channel="${chId}" value="${FUNNEL_DEFAULTS[chId]}" min="0" style="width:80px;padding:6px 8px;border:1px solid #e2e8f0;border-radius:4px;font-size:13px;text-align:center;" /></td>
+                    <td><input type="number" class="funnel-input" data-channel="${chId}" value="${FUNNEL_DEFAULTS[chId]}" min="0" class="rate-input" style="width:85px;" /></td>
                     <td><input type="number" class="rate-input funnel-rate" data-channel="${chId}" data-rate="leadToCardOut" value="${(rate.leadToCardOut * 100).toFixed(1)}" step="0.1" />%</td>
                     <td class="funnel-leads" data-channel="${chId}">0</td>
                     <td><input type="number" class="rate-input funnel-rate" data-channel="${chId}" data-rate="exitToLead" value="${(rate.exitToLead * 100).toFixed(1)}" step="0.1" />%</td>
@@ -2145,11 +2147,11 @@
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td><strong>${row.period}</strong></td>
-                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="mau" value="${row.mau}" style="width:70px;" /></td>
-                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="subConv" value="${row.subConv}" step="0.1" style="width:50px;" />%</td>
+                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="mau" value="${row.mau}" style="width:85px;" /></td>
+                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="subConv" value="${row.subConv}" step="0.1" style="width:72px;" />%</td>
                     <td class="drbk-subs" data-row="${idx}">0</td>
                     <td class="drbk-subrev" data-row="${idx}">₹0</td>
-                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="cardApp" value="${row.cardApp}" step="0.1" style="width:50px;" />%</td>
+                    <td><input type="number" class="rate-input drbk-input" data-row="${idx}" data-field="cardApp" value="${row.cardApp}" step="0.1" style="width:72px;" />%</td>
                     <td class="drbk-cards" data-row="${idx}">0</td>
                     <td class="drbk-affrev" data-row="${idx}">₹0</td>
                     <td class="drbk-total" data-row="${idx}" style="font-weight:700;color:var(--accent);">₹0</td>
