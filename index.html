@@ -918,8 +918,8 @@
                         <h4><span class="color-dot" style="background:#8b5cf6;"></span>Great.cards/ref (Influencer)</h4>
                         <div class="status">Status: Live</div>
                         <ul>
-                            <li>Influencers and creators share monetizable card links</li>
-                            <li>Link opens Great.cards with creator branding</li>
+                            <li>Influencers and creators share monetizable card links with their audience</li>
+                            <li>Link opens Great.cards; creators wanting custom branding opt for whitelabel instead</li>
                             <li>We provide product intelligence, creator provides distribution</li>
                             <li>Revenue share model with partner</li>
                         </ul>
@@ -969,7 +969,7 @@
                         <div class="status">Status: Pre-launch (MVP Q2 2026)</div>
                         <ul>
                             <li>Credit card spending copilot app, scans SMS to identify card portfolio</li>
-                            <li>Recommends optimal card for every purchase in real-time</li>
+                            <li>Recommends optimal card for every purchase: real-time before payment, retroactively for past transactions, and on-demand for any brand/merchant</li>
                             <li>Tracks savings, manages reward points, identifies portfolio gaps</li>
                             <li>Two revenue lines: subscription (₹199/month) and card application commissions</li>
                         </ul>
@@ -1016,15 +1016,15 @@
                         <h4><span class="color-dot" style="background:#ef4444;"></span>Insurance</h4>
                         <div class="status">Status: Planning (compliance pending)</div>
                         <ul>
-                            <li>Insurance lead generation from cards user base</li>
-                            <li>Cross-sell term and health insurance to existing users</li>
+                            <li>Insurance lead generation from CashKaro user base (not limited to cards users)</li>
+                            <li>Cross-sell term and health insurance to CK/BK users</li>
                             <li>Activate once compliance is approved</li>
-                            <li>Meaningful adjacency with cards user intent</li>
+                            <li>Meaningful adjacency; CK category page sees ~100K monthly visitors</li>
                         </ul>
                         <div class="metrics">
-                            <div>Net margin per policy: <strong>₹931 (Y0)</strong></div>
-                            <div>Payout: <strong>0%</strong> (margin is net of costs)</div>
-                            <div style="color:var(--accent);font-weight:700;">Retained: ₹931/policy</div>
+                            <div>Weighted avg Y0 margin: <strong>₹1,929/policy</strong></div>
+                            <div>Source: <strong>Insurance_Planning.xlsx</strong> (100% markup on CARE base, weighted by plan mix)</div>
+                            <div style="color:var(--accent);font-weight:700;">Retained: ₹1,929/policy</div>
                         </div>
                     </div>
 
@@ -1039,8 +1039,8 @@
                         </ul>
                         <div class="metrics">
                             <div>Commission: <strong>~₹3,000 avg</strong> (2% of ₹1.5L)</div>
-                            <div>Payout: <strong>40%</strong></div>
-                            <div style="color:var(--accent);font-weight:700;">Retained: ₹1,800</div>
+                            <div>Cashback to user: <strong>50%</strong> (same as CashKaro cards)</div>
+                            <div style="color:var(--accent);font-weight:700;">Retained: ₹1,500</div>
                         </div>
                     </div>
                 </div>
@@ -1086,15 +1086,59 @@
                         </table>
                     </div>
 
-                    <div style="margin-top:16px;padding:14px;background:#f8fafc;border-radius:6px;font-size:12px;color:#475569;">
-                        <strong>Rate sources and justifications:</strong>
-                        <ul style="margin-top:8px;list-style:none;padding:0;">
-                            <li style="margin-bottom:6px;padding-left:12px;position:relative;"><span style="position:absolute;left:0;">·</span><strong>B2C (Great.cards)</strong>: Page→Exit 1.5% is conservative blend of CK new user (0.84%) and old user (2.28%) Jan 2026 actuals. Exit→Lead 40.2% from CK B2C funnel. Lead→Card Out 13.2% from CK approval rate.</li>
-                            <li style="margin-bottom:6px;padding-left:12px;position:relative;"><span style="position:absolute;left:0;">·</span><strong>Ref / Influencer</strong>: Click = Exit (link goes direct to bank OTP page). Exit→Lead 3.7% from EK/IM B2B Jan 2026 data. Lead→Card Out 20.1% from B2B approval rates. Higher approval because influencer audience is pre-qualified.</li>
-                            <li style="margin-bottom:6px;padding-left:12px;position:relative;"><span style="position:absolute;left:0;">·</span><strong>Whitelabel</strong>: Page→Exit 3.3% from Tide early data (first 2 weeks live). Exit→Lead 15% is hypothesis, assuming partner-driven traffic has moderate intent. Lead→Card Out 8.2% from early WL conversion data.</li>
-                            <li style="margin-bottom:6px;padding-left:12px;position:relative;"><span style="position:absolute;left:0;">·</span><strong>API Platform</strong>: Click = Exit (API embeds link directly). Exit→Lead 1% is conservative assumption for embedded widget traffic. Lead→Card Out 16.6% from benchmark blended approval rate.</li>
-                            <li style="margin-bottom:6px;padding-left:12px;position:relative;"><span style="position:absolute;left:0;">·</span><strong>Dr.BankKaro</strong>: Simplified funnel: MAU → Card Application. 0.8% of MAU apply per month. Based on CRED's 1-2% application rate benchmark, discounted for early stage. Approval handled at Lead→Card Out stage.</li>
-                        </ul>
+                    <div style="margin-top:16px;">
+                        <h5 style="font-weight:600;font-size:13px;margin-bottom:12px;">Rate Sources & Justifications</h5>
+                        <div class="table-wrapper">
+                            <table style="font-size:12px;">
+                                <thead>
+                                    <tr>
+                                        <th>Channel</th>
+                                        <th>Page→Exit</th>
+                                        <th>Exit→Lead</th>
+                                        <th>Lead→Card Out</th>
+                                        <th>Source</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>B2C (Great.cards)</strong></td>
+                                        <td>1.5%</td>
+                                        <td>40.2%</td>
+                                        <td>13.2%</td>
+                                        <td>CK Jan 2026 actuals. New users 0.84%, old 2.28% exit rate (blended 1.5%). Exit→Lead and approval rates from CK B2C funnel (new user cohort, conservative).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ref / Influencer</strong></td>
+                                        <td>100% (click = exit)</td>
+                                        <td>3.7%</td>
+                                        <td>20.1%</td>
+                                        <td>EK/IM B2B Jan 2026 data. Link goes direct to bank. Higher approval because influencer audience is pre-qualified for intent.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Whitelabel</strong></td>
+                                        <td>3.3%</td>
+                                        <td>15%</td>
+                                        <td>8.2%</td>
+                                        <td>Page→Exit from Tide early data (first 2 weeks). Exit→Lead is hypothesis (partner traffic has moderate intent). Lead→Card Out from early WL data. End-to-end validates: 3.3% x 15% x 8.2% = 0.04%, matching WL benchmark (385 card outs / 943K clicks).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>API Platform</strong></td>
+                                        <td>100% (embed = exit)</td>
+                                        <td>1%</td>
+                                        <td>16.6%</td>
+                                        <td>API embeds link directly (click = exit). Exit→Lead 1% conservative for embedded widget traffic. Approval rate from benchmark blended rate. Source: data benchmarks(Sheet2).csv.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Dr.BankKaro</strong></td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>0.8%</td>
+                                        <td>Simplified: MAU → Card Application. 0.8% of MAU apply/month. CRED benchmark: 1-2%, discounted for early stage.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="font-size:11px;color:#94a3b8;margin-top:8px;">All rates from: User Data for Benchmarking Great.Cards Listing Page.xlsx (CK Jan 2026) and data benchmarks(Sheet2).csv</p>
                     </div>
                 </div>
             </section>
@@ -1110,7 +1154,7 @@
                     <button class="tab-btn" data-scenario="six_month">6-Month Plan</button>
                     <button class="tab-btn" data-scenario="founder_target">Founder Target</button>
                     <button class="tab-btn" data-scenario="whitelabel_led">Whitelabel-Led</button>
-                    <button class="tab-btn" data-scenario="platform_upside">Platform Upside</button>
+                    <button class="tab-btn" data-scenario="platform_upside">All Channels Scaled (18M)</button>
                 </div>
 
                 <div class="card fade-in">
@@ -1648,61 +1692,39 @@
                 </div>
 
                 <div class="card fade-in">
-                    <h4 style="margin-bottom:16px;font-weight:700;color:#0f172a;">Transition Risks & Dependencies</h4>
+                    <h4 style="margin-bottom:16px;font-weight:700;color:#0f172a;">Risks, Dependencies & Required Hires</h4>
                     <div class="table-wrapper">
                         <table style="font-size:13px;">
                             <thead>
                                 <tr>
-                                    <th>Risk / Dependency</th>
+                                    <th>Risk / Gap</th>
                                     <th>Impact</th>
-                                    <th>Mitigation</th>
+                                    <th>Resolution</th>
+                                    <th>Cost</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td><strong>Tarandeep Backend Departure</strong></td>
                                     <td>API platform, Dr.BankKaro UPI interception, data layer delays</td>
-                                    <td>Backend/Platform Eng hire (₹30L). Approve immediately.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Android Dev Capacity</strong></td>
-                                    <td>Dr.BankKaro app iOS/Android build-out and distribution</td>
-                                    <td>Android Developer hire (₹24L). Timing-critical for Q2 2026 MVP.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Shared Infra/SEO</strong></td>
-                                    <td>SEO growth and scaling ops may compete with other products</td>
-                                    <td>Prioritize BankKaro organic. Consider freelance support if bottleneck emerges.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="card fade-in">
-                    <h4 style="margin-bottom:16px;font-weight:700;color:#0f172a;">Proposed Reinforcements</h4>
-                    <div class="table-wrapper">
-                        <table style="font-size:13px;">
-                            <thead>
-                                <tr>
-                                    <th>Role</th>
-                                    <th>Unlock</th>
-                                    <th>Annual Cost</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Backend / Platform Eng</strong></td>
-                                    <td>API infrastructure, data layer, UPI interception, Dr.BankKaro backend</td>
-                                    <td>₹30L</td>
+                                    <td>Backend / Platform Eng hire</td>
+                                    <td>₹30L/yr</td>
                                     <td><span class="stage-badge" style="background:#d1fae5;color:#065f46;">Hiring Approved</span></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Android Developer</strong></td>
-                                    <td>Dr.BankKaro app iOS/Android build and distribution</td>
-                                    <td>₹24L</td>
+                                    <td><strong>Android Dev Capacity</strong></td>
+                                    <td>Dr.BankKaro app build-out and distribution</td>
+                                    <td>Android Developer hire</td>
+                                    <td>₹24L/yr</td>
                                     <td><span class="stage-badge" style="background:#fecaca;color:#991b1b;">Required</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shared Infra/SEO</strong></td>
+                                    <td>SEO growth may compete with other products</td>
+                                    <td>Prioritize BankKaro organic; freelance support if bottleneck</td>
+                                    <td>Variable</td>
+                                    <td><span class="stage-badge stage-ongoing">Monitor</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1820,8 +1842,8 @@
             { id: "drbankkaro_cards", name: "Dr.BankKaro Cards", cat: "platform", color: "#f472b6", comm: 2000, pay: 50, type: "app_affiliate", label: "Cashback to User" },
             { id: "corp_whitelabel", name: "Corporate Whitelabel", cat: "platform", color: "#14b8a6", comm: 2000, pay: 60, type: "corp", label: "Cashback to Employees (60%)" },
             { id: "mini_cashback", name: "Mini Cashback App", cat: "platform", color: "#a855f7", comm: 2000, pay: 50, type: "b2c", label: "Cashback to User (50%)" },
-            { id: "insurance", name: "Insurance", cat: "platform", color: "#ef4444", comm: 931, pay: 0, type: "lead", label: "Net Y0 Margin/Policy" },
-            { id: "loans", name: "Personal Loans", cat: "platform", color: "#6366f1", comm: 3000, pay: 40, type: "lead", label: "2% of Disbursement" }
+            { id: "insurance", name: "Insurance", cat: "platform", color: "#ef4444", comm: 1929, pay: 0, type: "lead", label: "Wtd Avg Y0 Margin/Policy" },
+            { id: "loans", name: "Personal Loans", cat: "platform", color: "#6366f1", comm: 3000, pay: 50, type: "lead", label: "Cashback to User (50%)" }
         ];
 
         const SCENARIOS = {
@@ -1876,7 +1898,7 @@
                 ]
             },
             platform_upside: {
-                name: "Platform Upside (18-Month)",
+                name: "All Channels Scaled (18-Month)",
                 note: "All channels scaled. Dr.BankKaro 200K MAU. Insurance + Corp WL live. Mini cashback app launched.",
                 streams: [
                     { id: "organic", conv: 400 }, { id: "ref_id", conv: 300 }, { id: "whitelabel", conv: 1200 }, { id: "api", conv: 500 },
@@ -1974,7 +1996,7 @@
             scenario.streams.forEach(s => {
                 const stream = STREAMS.find(st => st.id === s.id);
                 const conversions = userConvOverrides[s.id] !== undefined ? userConvOverrides[s.id] : s.conv;
-                const commission = s.id === "drbankkaro_sub" ? 199 : (s.id === "insurance" ? 931 : (s.id === "loans" ? 3000 : comm));
+                const commission = s.id === "drbankkaro_sub" ? 199 : (s.id === "insurance" ? 1929 : (s.id === "loans" ? 3000 : comm));
                 const payoutPct = stream.pay / 100;
                 const payout = commission * payoutPct;
                 const retained = commission - payout;
@@ -2017,7 +2039,7 @@
                 const streamId = input.dataset.streamId;
                 const stream = STREAMS.find(st => st.id === streamId);
                 const conversions = parseInt(input.value) || 0;
-                const commission = streamId === "drbankkaro_sub" ? 199 : (streamId === "insurance" ? 931 : (streamId === "loans" ? 3000 : comm));
+                const commission = streamId === "drbankkaro_sub" ? 199 : (streamId === "insurance" ? 1929 : (streamId === "loans" ? 3000 : comm));
                 const payoutPct = stream.pay / 100;
                 const payout = commission * payoutPct;
                 const retained = commission - payout;
