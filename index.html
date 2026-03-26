@@ -890,30 +890,92 @@
                 <h2 class="section-title">Force Multipliers: Why Bundling Changes Economics</h2>
                 <div class="section-subtitle">Each product unlocks the others. Margins compound.</div>
 
-                <div class="card" style="margin-bottom:16px;">
-                    <h4 style="color:#0f172a;margin-bottom:8px;font-weight:700;font-size:15px;">1. Corporate Employee Program + Card Bundling</h4>
-                    <p style="font-size:14px;line-height:1.6;color:#475569;margin:0;"><strong>Standalone:</strong> ₹1,000 retained margin per card, one-time user. <strong>Bundled:</strong> ₹2,500+ margin per employee + 5-8 additional card outs. The extra cards come from employees choosing different cards for different spending (travel, shopping, fuel, etc.) once enrolled. Recurring benefit. Real budget. Enterprise defensibility.</p>
-                </div>
+                <style>
+                    .multipliers-table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        font-size: 13px;
+                        line-height: 1.5;
+                    }
+                    .multipliers-table th {
+                        background: #f1f5f9;
+                        color: #0f172a;
+                        text-align: left;
+                        padding: 10px;
+                        font-weight: 700;
+                        border-bottom: 1px solid #cbd5e1;
+                    }
+                    .multipliers-table td {
+                        padding: 12px;
+                        border-bottom: 1px solid #e2e8f0;
+                    }
+                    .multipliers-table tr:last-child td {
+                        border-bottom: none;
+                    }
+                    .multiplier-name {
+                        color: #0f172a;
+                        font-weight: 600;
+                        width: 20%;
+                        min-width: 140px;
+                    }
+                    .multiplier-current {
+                        color: #64748b;
+                        width: 25%;
+                    }
+                    .multiplier-bundled {
+                        color: #1e293b;
+                        font-weight: 500;
+                        width: 28%;
+                    }
+                    .multiplier-uplift {
+                        color: #059669;
+                        font-weight: 500;
+                        width: 27%;
+                    }
+                </style>
 
-                <div class="card" style="margin-bottom:16px;">
-                    <h4 style="color:#0f172a;margin-bottom:8px;font-weight:700;font-size:15px;">2. Dr.BankKaro App + Spend Visibility</h4>
-                    <p style="font-size:14px;line-height:1.6;color:#475569;margin:0;"><strong>Without app:</strong> Users apply for one card, we never see if they used it. Black box. No cross-sell signals. <strong>With app:</strong> Users share spend data (SMS scan). We see actual spending patterns and recommend optimal card + insurance + loans. Retained daily-active user. Subscription revenue. High-intent application funnel backed by real data.</p>
-                </div>
-
-                <div class="card" style="margin-bottom:16px;">
-                    <h4 style="color:#0f172a;margin-bottom:8px;font-weight:700;font-size:15px;">3. CashKaro API Journeys (Real Revenue Stream)</h4>
-                    <p style="font-size:14px;line-height:1.6;color:#475569;margin:0;"><strong>Before:</strong> User clicks SBI or Axis card on CashKaro, gets redirected to bank, journey is a black box, we see only final report at T+1. <strong>Now:</strong> User completes journey on BankKaro platform. We see every step, optimize funnel, reduce drop-off, and cross-sell insurance/loans post-conversion. <strong>Current: 200-300 incremental card outs/month with SBI + Axis live. Scaling to HDFC, ICICI, Amex, and other banks.</strong> This is real revenue, not a side effect.</p>
-                </div>
-
-                <div class="card" style="margin-bottom:16px;">
-                    <h4 style="color:#0f172a;margin-bottom:8px;font-weight:700;font-size:15px;">4. Whitelabel Partners as Distribution Lock-in</h4>
-                    <p style="font-size:14px;line-height:1.6;color:#475569;margin:0;"><strong>Cards only:</strong> Each partner drives traffic, we earn margin, partner can leave anytime. <strong>With bundling:</strong> Cards bring users, then we cross-sell insurance and loans to that partner's audience. Partner becomes locked in because bundled value (cards + insurance + loans) is higher than cards alone. 10+ partners becomes a defensible network effect.</p>
-                </div>
-
-                <div class="card">
-                    <h4 style="color:#0f172a;margin-bottom:8px;font-weight:700;font-size:15px;">5. Insurance as Regulatory Wedge for Loans</h4>
-                    <p style="font-size:14px;line-height:1.6;color:#475569;margin:0;"><strong>Cards alone:</strong> Limited adjacent products. No recurring revenue. <strong>With insurance:</strong> Once we have insurance compliance and distribution, loans become natural next step (same underwriting, same customer base, same trust). Insurance creates recurring revenue + unlocks loans across corporate, app, and whitelabel channels. Regulatory clarity compounds distribution leverage.</p>
-                </div>
+                <table class="multipliers-table">
+                    <thead>
+                        <tr>
+                            <th class="multiplier-name">Multiplier</th>
+                            <th class="multiplier-current">Standalone</th>
+                            <th class="multiplier-bundled">+ Bundled</th>
+                            <th class="multiplier-uplift">Key Uplift</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="multiplier-name">1. Corporate Employee Program</td>
+                            <td class="multiplier-current">₹1K margin/card, 1 card/user</td>
+                            <td class="multiplier-bundled">₹2.5K+ margin/employee, 5–8 cards/user</td>
+                            <td class="multiplier-uplift">Enterprise defensibility, recurring budget</td>
+                        </tr>
+                        <tr>
+                            <td class="multiplier-name">2. Dr.BankKaro App</td>
+                            <td class="multiplier-current">One-time card application, black box post-purchase</td>
+                            <td class="multiplier-bundled">Spend data → recommendations → subscriptions + high-intent card outs</td>
+                            <td class="multiplier-uplift">Retained DAU, recurring revenue, locked funnel</td>
+                        </tr>
+                        <tr>
+                            <td class="multiplier-name">3. CashKaro API Journeys</td>
+                            <td class="multiplier-current">Traffic sent to bank, no control, T+1 reporting</td>
+                            <td class="multiplier-bundled">Journey on BankKaro platform, full funnel visibility, post-conversion upsells</td>
+                            <td class="multiplier-uplift">200–300 incremental cards/month current (SBI + Axis), scaling to HDFC/ICICI</td>
+                        </tr>
+                        <tr>
+                            <td class="multiplier-name">4. Whitelabel Partners</td>
+                            <td class="multiplier-current">Cards only, partner can leave anytime</td>
+                            <td class="multiplier-bundled">Cards + insurance + loans bundled, partner locked in by higher value</td>
+                            <td class="multiplier-uplift">10+ partners as defensible network, reduced churn</td>
+                        </tr>
+                        <tr>
+                            <td class="multiplier-name">5. Insurance Regulatory Wedge</td>
+                            <td class="multiplier-current">Cards alone, limited adjacency, no recurring revenue</td>
+                            <td class="multiplier-bundled">Insurance → loans (same underwriting, same customer, same trust)</td>
+                            <td class="multiplier-uplift">Recurring revenue, regulatory clarity unlocks corporate + app + whitelabel expansion</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
             <!-- SECTION 2: REVENUE STREAMS -->
