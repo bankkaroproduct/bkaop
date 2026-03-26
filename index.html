@@ -1958,9 +1958,9 @@
         const SCENARIOS = {
             current: {
                 name: "Current (Month 0)",
-                note: "Great.cards just live. Tide WL live 2 weeks. No ref/API volume yet.",
+                note: "Great.cards just live. Tide WL live 2 weeks (baseline ~50 cards/month). No significant ref/corp yet.",
                 streams: [
-                    { id: "organic", conv: 3 }, { id: "ref_id", conv: 0 }, { id: "whitelabel", conv: 5 }, { id: "api", conv: 0 },
+                    { id: "organic", conv: 3 }, { id: "ref_id", conv: 0 }, { id: "whitelabel", conv: 30 }, { id: "api", conv: 0 },
                     { id: "drbankkaro_sub", conv: 0 }, { id: "drbankkaro_cards", conv: 0 },
                     { id: "corp_whitelabel", conv: 0 }, { id: "mini_cashback", conv: 0 },
                     { id: "insurance", conv: 0 }, { id: "loans", conv: 0 }, { id: "ck_api_journeys", conv: 250 }
@@ -1968,9 +1968,9 @@
             },
             three_month: {
                 name: "3-Month Target",
-                note: "First 10 influencers active. Tide scaled. 2 more WL partners. B2C SEO starting. CK API journeys optimized (SBI + Axis).",
+                note: "Tide scaling full month. 3 WL partners active (Tide + 2 more at ~50-70 cards each). CK API optimized (SBI + Axis). First influencers live.",
                 streams: [
-                    { id: "organic", conv: 30 }, { id: "ref_id", conv: 20 }, { id: "whitelabel", conv: 50 }, { id: "api", conv: 0 },
+                    { id: "organic", conv: 30 }, { id: "ref_id", conv: 20 }, { id: "whitelabel", conv: 120 }, { id: "api", conv: 0 },
                     { id: "drbankkaro_sub", conv: 0 }, { id: "drbankkaro_cards", conv: 0 },
                     { id: "corp_whitelabel", conv: 0 }, { id: "mini_cashback", conv: 0 },
                     { id: "insurance", conv: 0 }, { id: "loans", conv: 0 }, { id: "ck_api_journeys", conv: 350 }
@@ -1978,9 +1978,9 @@
             },
             six_month: {
                 name: "6-Month Plan",
-                note: "SEO kicking in. 5+ WL partners. 50+ influencers. Dr.BankKaro MVP live at ~8K MAU. CK API journeys scaled (SBI/Axis/HDFC/ICICI).",
+                note: "5 WL partners active (~280 cards/month total from partner placement conversions). SEO starting. Dr.BankKaro MVP at 8K MAU. CK API journeys across SBI/Axis/HDFC/ICICI.",
                 streams: [
-                    { id: "organic", conv: 80 }, { id: "ref_id", conv: 70 }, { id: "whitelabel", conv: 200 }, { id: "api", conv: 50 },
+                    { id: "organic", conv: 80 }, { id: "ref_id", conv: 70 }, { id: "whitelabel", conv: 280 }, { id: "api", conv: 50 },
                     { id: "drbankkaro_sub", conv: 240 }, { id: "drbankkaro_cards", conv: 64 },
                     { id: "corp_whitelabel", conv: 0 }, { id: "mini_cashback", conv: 0 },
                     { id: "insurance", conv: 20 }, { id: "loans", conv: 0 }, { id: "ck_api_journeys", conv: 600 }
@@ -1988,9 +1988,9 @@
             },
             scaled_12m: {
                 name: "Scaled (12M)",
-                note: "12-month milestone. 200+ influencers. 10+ WL partners. Dr.BankKaro at 50K MAU. Insurance live. Corporate WL pilot. All major banks on API journeys.",
+                note: "8–10 WL partners mature. 200+ influencers. Dr.BankKaro 50K MAU. Corporate WL pilot. Insurance live. CK API journeys at scale across all banks.",
                 streams: [
-                    { id: "organic", conv: 250 }, { id: "ref_id", conv: 200 }, { id: "whitelabel", conv: 600 }, { id: "api", conv: 200 },
+                    { id: "organic", conv: 250 }, { id: "ref_id", conv: 200 }, { id: "whitelabel", conv: 620 }, { id: "api", conv: 200 },
                     { id: "drbankkaro_sub", conv: 1500 }, { id: "drbankkaro_cards", conv: 500 },
                     { id: "corp_whitelabel", conv: 100 }, { id: "mini_cashback", conv: 50 },
                     { id: "insurance", conv: 100 }, { id: "loans", conv: 30 }, { id: "ck_api_journeys", conv: 1200 }
@@ -1998,9 +1998,9 @@
             },
             whitelabel_led: {
                 name: "Whitelabel-Led (12M)",
-                note: "Alternative 12-month path where WL is primary driver. 15+ partners. Corporate WL active. B2C and ref secondary. CK API journeys ongoing.",
+                note: "WL-focused path: 12–15 partners mature, averaging 60–80 cards each (~900 total). Corp WL active. CK API journeys steady. Minimal paid CAC.",
                 streams: [
-                    { id: "organic", conv: 60 }, { id: "ref_id", conv: 50 }, { id: "whitelabel", conv: 800 }, { id: "api", conv: 150 },
+                    { id: "organic", conv: 60 }, { id: "ref_id", conv: 50 }, { id: "whitelabel", conv: 900 }, { id: "api", conv: 150 },
                     { id: "drbankkaro_sub", conv: 300 }, { id: "drbankkaro_cards", conv: 100 },
                     { id: "corp_whitelabel", conv: 200 }, { id: "mini_cashback", conv: 30 },
                     { id: "insurance", conv: 30 }, { id: "loans", conv: 10 }, { id: "ck_api_journeys", conv: 1000 }
@@ -2008,9 +2008,9 @@
             },
             founder_target: {
                 name: "Founder Target (24M, 5x Opex)",
-                note: "24-month target: 5x monthly opex = ₹1.04 Cr retained GM. All channels at scale. Dr.BankKaro 333K MAU. Insurance + Corp WL mature. Full platform monetization. CK API journeys mature.",
+                note: "24-month: 5x opex = ₹1.04 Cr retained GM. 20+ WL partners mature. Dr.BankKaro 333K MAU. Insurance + Corp bundle mature. All channels optimized. CK API journeys fully scaled.",
                 streams: [
-                    { id: "organic", conv: 600 }, { id: "ref_id", conv: 500 }, { id: "whitelabel", conv: 2000 }, { id: "api", conv: 800 },
+                    { id: "organic", conv: 600 }, { id: "ref_id", conv: 500 }, { id: "whitelabel", conv: 1800 }, { id: "api", conv: 800 },
                     { id: "drbankkaro_sub", conv: 10000 }, { id: "drbankkaro_cards", conv: 3000 },
                     { id: "corp_whitelabel", conv: 800 }, { id: "mini_cashback", conv: 400 },
                     { id: "insurance", conv: 800 }, { id: "loans", conv: 200 }, { id: "ck_api_journeys", conv: 2000 }
@@ -2019,10 +2019,10 @@
         };
 
         const FUNNEL_RATES = {
-            organic: { pageToExit: 0.015, exitToLead: 0.25, leadToCardOut: 0.132, label: "B2C (Great.cards)" },
+            organic: { pageToExit: 0.025, exitToLead: 0.25, leadToCardOut: 0.132, label: "B2C (Great.cards)" },
             ref_id: { pageToExit: 0.04, exitToLead: 0.037, leadToCardOut: 0.201, label: "Ref / Influencer" },
             whitelabel: { pageToExit: 0.033, exitToLead: 0.15, leadToCardOut: 0.082, label: "Whitelabel" },
-            api: { pageToExit: 0.03, exitToLead: 0.01, leadToCardOut: 0.166, label: "API Platform" },
+            api: { pageToExit: 0.03, exitToLead: 0.02, leadToCardOut: 0.166, label: "API Platform" },
             drbankkaro_cards: { pageToExit: 0.04, exitToLead: 0.15, leadToCardOut: 0.132, label: "Dr.BankKaro" }
         };
 
